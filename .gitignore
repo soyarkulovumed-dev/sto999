@@ -1,0 +1,7 @@
+# Owner's original materials (large, not part of the website)
+/*.png
+/*.mp4
+
+# Working notes and local tools
+/PROMPT.md
+/.claude/
