@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soyarkulovumed-dev.github.io/sto999/sitemap.xml
