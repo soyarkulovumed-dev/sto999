@@ -53,6 +53,7 @@
     $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     updateWaLinks();
     updateStatus();
+    syncThemeUi();
     burger && burger.setAttribute("aria-label", menu.hidden ? ui().menuOpen : ui().menuClose);
     store.set("sto999-lang", lang);
   }
@@ -112,6 +113,7 @@
   const menu = $("#mobile-menu");
 
   function setMenu(open) {
+    header.classList.toggle("is-menu", open);
     burger.setAttribute("aria-expanded", String(open));
     burger.setAttribute("aria-label", open ? ui().menuClose : ui().menuOpen);
     body.classList.toggle("is-locked", open);
@@ -412,6 +414,77 @@
     doneBox.hidden = false;
     doneLink.click();
   });
+
+  /* ---------------- light / dark theme ---------------- */
+  const root = document.documentElement;
+  const themeBtn = $(".theme-switch");
+  const themeMeta = $('meta[name="theme-color"]');
+  const isLight = () => root.getAttribute("data-site-theme") === "light";
+
+  function syncThemeUi() {
+    themeBtn.setAttribute("aria-pressed", String(isLight()));
+    themeBtn.setAttribute("aria-label", isLight() ? ui().toDark : ui().toLight);
+    if (themeMeta) themeMeta.content = isLight() ? "#F1F2F4" : "#0A0A0B";
+  }
+  themeBtn.addEventListener("click", () => {
+    root.classList.add("theme-anim");
+    if (isLight()) root.removeAttribute("data-site-theme"); else root.setAttribute("data-site-theme", "light");
+    store.set("sto999-theme", isLight() ? "light" : "dark");
+    syncThemeUi();
+    setTimeout(() => root.classList.remove("theme-anim"), 450);
+  });
+
+  /* ---------------- scroll road: the car drives with the page ---------------- */
+  const road = $(".road");
+  if (road) {
+    const car = $(".road__car", road);
+    const rot = $(".road__rot", road);
+    const maxScroll = () => document.documentElement.scrollHeight - window.innerHeight;
+    let prevY = window.scrollY;
+    let moveTimer = 0;
+    let queued = false;
+
+    const place = () => {
+      queued = false;
+      const max = maxScroll();
+      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      car.style.transform = `translateY(${(p * (road.clientHeight - car.offsetHeight)).toFixed(1)}px)`;
+      road.style.setProperty("--p", `${(p * 100).toFixed(2)}%`);
+    };
+    const drive = () => {
+      const y = window.scrollY;
+      if (y !== prevY) {
+        rot.classList.toggle("is-up", y < prevY); // nose points where the page is going
+        prevY = y;
+        car.classList.add("is-moving");
+        clearTimeout(moveTimer);
+        moveTimer = setTimeout(() => car.classList.remove("is-moving"), 260);
+      }
+      if (!queued) { queued = true; requestAnimationFrame(place); }
+    };
+    window.addEventListener("scroll", drive, { passive: true });
+    window.addEventListener("resize", place);
+    place();
+
+    // grab the car and drag it along the road to scroll the page
+    car.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      car.setPointerCapture(e.pointerId);
+      road.classList.add("is-drag");
+      const move = (ev) => {
+        const r = road.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, (ev.clientY - r.top - car.offsetHeight / 2) / (r.height - car.offsetHeight)));
+        window.scrollTo({ top: p * maxScroll(), behavior: "instant" });
+      };
+      const stop = () => {
+        road.classList.remove("is-drag");
+        car.removeEventListener("pointermove", move);
+      };
+      car.addEventListener("pointermove", move);
+      car.addEventListener("pointerup", stop, { once: true });
+      car.addEventListener("pointercancel", stop, { once: true });
+    });
+  }
 
   /* ---------------- misc ---------------- */
   $$(".js-year").forEach((el) => { el.textContent = new Date().getFullYear(); });

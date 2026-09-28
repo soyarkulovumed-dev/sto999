@@ -597,7 +597,9 @@ window.I18N_UI = {
     menuOpen: "Открыть меню",
     menuClose: "Закрыть меню",
     ready: "Заявка готова. Если WhatsApp не открылся, нажмите кнопку ниже.",
-    openWa: "Открыть WhatsApp с заявкой"
+    openWa: "Открыть WhatsApp с заявкой",
+    toLight: "Включить светлую тему",
+    toDark: "Включить тёмную тему"
   },
   tj: {
     open: "Ҳозир кушода · то 19:00",
@@ -611,7 +613,9 @@ window.I18N_UI = {
     menuOpen: "Кушодани меню",
     menuClose: "Пӯшидани меню",
     ready: "Дархост тайёр. Агар WhatsApp накушода бошад, тугмаи поёнро пахш кунед.",
-    openWa: "Кушодани WhatsApp бо дархост"
+    openWa: "Кушодани WhatsApp бо дархост",
+    toLight: "Мавзӯи равшан",
+    toDark: "Мавзӯи торик"
   },
   en: {
     open: "Open now · until 19:00",
@@ -625,6 +629,8 @@ window.I18N_UI = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
     ready: "Your request is ready. If WhatsApp didn't open, tap the button below.",
-    openWa: "Open WhatsApp with your request"
+    openWa: "Open WhatsApp with your request",
+    toLight: "Switch to light theme",
+    toDark: "Switch to dark theme"
   }
 };
