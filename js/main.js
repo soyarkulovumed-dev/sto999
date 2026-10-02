@@ -231,12 +231,11 @@
 
   /* ---------------- hero video (home page) ----------------
      Laptop/desktop: three vertical reels side by side. Phone: one montage.
-     Only the needed files are downloaded. The footage is blurred in CSS. */
+     Only the needed files are downloaded; the footage is blurred in CSS and always plays. */
   if (hero) {
-    const pauseBtn = $(".hero__pause");
     const wide = window.matchMedia("(min-width: 901px)");
     let heroVideos = [];
-    let heroPaused = reduceMotion;
+    const heroPaused = reduceMotion;
     let heroVisible = true;
 
     const startVideo = (v) => {
@@ -254,23 +253,12 @@
       heroVideos = next;
       heroVideos.forEach(startVideo);
     };
-    const setPauseIcon = () => {
-      $("use", pauseBtn).setAttribute("href", heroPaused ? "#i-play" : "#i-pause");
-      pauseBtn.setAttribute("data-i18n-attr", heroPaused ? "aria-label:a11y.play" : "aria-label:a11y.pause");
-      pauseBtn.setAttribute("aria-label", t(heroPaused ? "a11y.play" : "a11y.pause"));
-    };
-    pauseBtn.addEventListener("click", () => {
-      heroPaused = !heroPaused;
-      heroVideos.forEach((v) => (heroPaused ? v.pause() : v.play().catch(() => {})));
-      setPauseIcon();
-    });
     new IntersectionObserver(([e]) => {
       heroVisible = e.isIntersecting;
       heroVideos.forEach((v) => (heroVisible && !heroPaused ? v.play().catch(() => {}) : v.pause()));
     }).observe(hero);
     wide.addEventListener("change", pickHeroSet);
     pickHeroSet();
-    setPauseIcon();
   }
 
   /* ---------------- case & reel videos: poster first, file only when near the screen ---------------- */
@@ -300,20 +288,6 @@
     loadObs.observe(box);
   });
 
-  /* ---------------- team: photo of each craft follows the cursor ---------------- */
-  const preview = $(".role-preview");
-  if (preview && finePointer) {
-    const pImg = $("img", preview);
-    $$(".role[data-img]").forEach((row) => {
-      row.addEventListener("pointerenter", () => { pImg.src = row.dataset.img; preview.classList.add("is-on"); });
-      row.addEventListener("pointerleave", () => preview.classList.remove("is-on"));
-      row.addEventListener("pointermove", (e) => {
-        preview.style.left = `${Math.min(Math.max(e.clientX + 320, window.innerWidth * 0.58), window.innerWidth - 170)}px`;
-        preview.style.top = `${e.clientY}px`;
-      });
-    });
-  }
-
   /* ---------------- detail window: services and team ---------------- */
   const card = $(".modal__card", modal);
   const m = {
@@ -324,7 +298,8 @@
   };
   let lastFocus = null;
 
-  function fill({ img, alt, icon, n, kicker, title, detail, price, ctaText, ctaUrl, link }) {
+  function fill({ team, img, alt, icon, n, kicker, title, detail, price, ctaText, ctaUrl, link }) {
+    modal.classList.toggle("modal--team", !!team);
     m.media.innerHTML = "";
     if (img) {
       const el = document.createElement("img");
@@ -340,8 +315,7 @@
     m.ctaText.textContent = ctaText;
     m.cta.href = ctaUrl;
     m.link.hidden = !link;
-    m.link.onclick = null;
-    if (link) { $("span", m.link).textContent = link.label; m.link.onclick = link.open; }
+    if (link) { $("span", m.link).textContent = link.label; m.link.href = link.href; }
     m.content.scrollTop = 0;
     card.scrollTop = 0;
   }
@@ -355,14 +329,14 @@
       price: true, ctaText: ui().svcCta, ctaUrl: waUrl(ui().waService(title))
     };
   }
-  function roleData(row) {
-    const name = $(".role__name", row).textContent.trim();
-    const svc = $(`.svc[data-svc="${row.dataset.svcLink}"]`);
+  function roleData(cardEl) {
+    const name = $(".crew__name", cardEl).textContent.trim();
+    const svcName = $(".crew__svc", cardEl).textContent.trim();
     return {
-      img: row.dataset.img, alt: name, icon: "#i-team", n: $(".role__n", row).textContent, kicker: ui().roleKicker,
-      title: name, detail: $(".role__detail", row).innerHTML, price: false,
+      team: true, img: cardEl.dataset.img, alt: name, icon: "#i-team", n: $(".crew__n", cardEl).textContent, kicker: ui().roleKicker,
+      title: name, detail: $(".crew__detail", cardEl).innerHTML, price: false,
       ctaText: ui().roleCta, ctaUrl: waUrl(ui().waRole(name)),
-      link: svc && { label: ui().aboutService($(".svc__title", svc).textContent.trim()), open: () => fill(serviceData(svc)) }
+      link: { label: ui().aboutService(svcName), href: `services.html#svc-${cardEl.dataset.svcLink}` }
     };
   }
 
@@ -389,7 +363,12 @@
     });
   };
   $$(".svc").forEach((el) => activate(el, serviceData));
-  $$(".role[data-svc-link]").forEach((el) => activate(el, roleData));
+  $$(".crew__card[data-svc-link]").forEach((el) => activate(el, roleData));
+  // wheel over the photo scrolls the text column
+  m.media.addEventListener("wheel", (e) => { m.content.scrollTop += e.deltaY; e.preventDefault(); }, { passive: false });
+  // services.html#svc-body opens that service straight away (links from the team page)
+  const target = location.hash.startsWith("#svc-") && document.getElementById(location.hash.slice(1));
+  if (target) setTimeout(() => { target.scrollIntoView({ block: "center" }); openModal(serviceData(target), target); }, 500);
   $$("[data-close]", modal).forEach((el) => el.addEventListener("click", closeModal));
 
   document.addEventListener("keydown", (e) => {

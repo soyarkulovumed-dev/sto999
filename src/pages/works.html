@@ -1,50 +1,68 @@
 <section class="page-hero">
   <div class="page-hero__bg" aria-hidden="true" style="background-image: url('assets/img/svc-body.webp')"></div>
   <div class="container page-hero__inner">
-    <nav class="crumbs" aria-label="Навигация"><a href="./" data-i18n="crumbs.home">Главная</a><span aria-hidden="true">/</span><span data-i18n="nav.works">Работы</span></nav>
-    <h1 class="page-hero__title reveal-title"><span class="line"><span data-i18n="page.works.t">Работы и кейсы</span></span></h1>
-    <p class="page-hero__lead reveal" data-i18n="page.works.lead">Показываем, как проходит ремонт: от повреждений до выдачи машины, на которой не видно следов работы.</p>
+    <nav class="crumbs" aria-label="Навигация"><a href="./" data-i18n="nav.home">Главная</a><span aria-hidden="true">/</span><span data-i18n="nav.works">Работы</span></nav>
+    <h1 class="page-hero__title reveal-title"><span class="line"><span data-i18n="page.works.t">Работы</span></span></h1>
+    <p class="page-hero__lead reveal" data-i18n="page.works.lead">Как работают мастера и как проходит ремонт — от заявки до чистой машины.</p>
   </div>
 </section>
 
-<!-- ============ BODYWORK CASE ============ -->
-<section class="section works" id="cases">
+<!-- ============ WORKS (reels) ============ -->
+<section class="section reels-sec" id="works">
   <div class="container">
     <div class="section__head section__head--split">
       <div>
         <p class="section__num"><span>01</span> / <span data-i18n="works.kicker">Работы</span></p>
         <h2 class="section__title reveal-title">
-          <span class="line"><span data-i18n="works.t1">Процесс, который</span></span>
-          <span class="line"><span data-i18n="works.t2">обычно за кадром</span></span>
+          <span class="line"><span data-i18n="reels.t1">Как работают</span></span>
+          <span class="line"><span class="accent" data-i18n="reels.t2">мастера</span></span>
         </h2>
       </div>
-      <a class="btn btn--ghost magnetic reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span data-i18n="works.more">Больше работ в Instagram</span></a>
+      <a class="btn btn--ghost magnetic reveal" href="cases.html"><span data-i18n="works.cases">Смотреть кейсы</span><svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
+    <div class="reels">
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/reel/DcxpY3yI81U/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-body.mp4" data-poster="assets/video/work-body.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag" data-i18n="reel.1tag">Жестянка</p><h3 data-i18n="reel.1t">Рихтовка и вытяжка металла</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
+      </a>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-pdr.mp4" data-poster="assets/video/work-pdr.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag">PDR</p><h3 data-i18n="reel.2t">Вмятина уходит — краска остаётся</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
+      </a>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-ev.mp4" data-poster="assets/video/work-ev.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag" data-i18n="reel.3tag">Электромобили</p><h3 data-i18n="reel.3t">Диагностика и ремонт батареи</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
+      </a>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-day.mp4" data-poster="assets/video/work-day.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag">СТО999</p><h3 data-i18n="reel.4t">Один день в сервисе</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <article class="story story--flip reveal">
-      <div class="story__video">
-        <div class="phone" data-video="assets/video/case-lexus.mp4" data-poster="assets/video/case-lexus.jpg">
-          <span class="phone__badge"><i></i>Lexus RX</span>
-        </div>
-      </div>
-      <div class="story__body">
-        <p class="story__tag" data-i18n="lexus.tag">Кейс · кузов и покраска</p>
-        <h3 class="story__title" data-i18n="lexus.title">Lexus RX: от повреждений до выдачи</h3>
-        <p class="story__lead" data-i18n="lexus.lead">Автомобиль приехал с повреждениями кузова. Разобрали, восстановили металл, подготовили и покрасили детали, собрали — и выдали машину, на которой не видно следов ремонта.</p>
-        <div class="ba">
-          <figure class="ba__item"><img src="assets/img/lexus-before.webp" alt="Lexus RX до ремонта: крыло в шпаклёвке, бампер снят" loading="lazy" width="1080" height="1074"><figcaption data-i18n="ba.before">До</figcaption></figure>
-          <figure class="ba__item"><img src="assets/img/lexus-after.webp" alt="Lexus RX после кузовного ремонта и покраски" loading="lazy" width="1080" height="1076"><figcaption class="is-after" data-i18n="ba.after">После</figcaption></figure>
-        </div>
-        <ol class="story__steps">
-          <li data-i18n="lexus.s1">Осмотр и разборка</li>
-          <li data-i18n="lexus.s2">Кузовные работы</li>
-          <li data-i18n="lexus.s3">Подготовка и покраска</li>
-          <li data-i18n="lexus.s4">Сборка</li>
-          <li data-i18n="lexus.s5">Выдача</li>
-        </ol>
-      </div>
-    </article>
-
+<!-- ============ PROCESS ============ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__num"><span>02</span> / <span data-i18n="process.kicker">Как мы работаем</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="process.t1">От заявки</span></span>
+        <span class="line"><span data-i18n="process.t2">до чистой машины</span></span>
+      </h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step__n">01</span><h3 data-i18n="step.1t">Заявка</h3><p data-i18n="step.1d">Звонок, WhatsApp или Telegram. Можно сразу прислать фото повреждения.</p></li>
+      <li class="step reveal"><span class="step__n">02</span><h3 data-i18n="step.2t">Осмотр и диагностика</h3><p data-i18n="step.2d">Профильный мастер осматривает автомобиль и определяет объём работ.</p></li>
+      <li class="step reveal"><span class="step__n">03</span><h3 data-i18n="step.3t">Цена и сроки</h3><p data-i18n="step.3d">Называем стоимость и срок после осмотра. Начинаем только после вашего согласия.</p></li>
+      <li class="step reveal"><span class="step__n">04</span><h3 data-i18n="step.4t">Работа мастера</h3><p data-i18n="step.4d">Каждый этап делает специалист своего направления — правильным инструментом.</p></li>
+      <li class="step reveal"><span class="step__n">05</span><h3 data-i18n="step.5t">Контроль качества</h3><p data-i18n="step.5d">Проверяем результат: геометрию, зазоры, цвет, работу систем.</p></li>
+      <li class="step reveal"><span class="step__n">06</span><h3 data-i18n="step.6t">Выдача + мойка</h3><p data-i18n="step.6d">Отдаём автомобиль после бесплатной комплексной мойки.</p></li>
+    </ol>
   </div>
 </section>
 

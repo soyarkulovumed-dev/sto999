@@ -7,14 +7,7 @@
     </div>
     <div>
       <p class="footer__h" data-i18n="footer.nav">Навигация</p>
-      <ul class="footer__links">
-        <li><a href="./#services" data-i18n="nav.services">Услуги</a></li>
-        <li><a href="ppf.html" data-i18n="nav.ppf">Бронеплёнка</a></li>
-        <li><a href="works.html" data-i18n="nav.works">Работы</a></li>
-        <li><a href="about.html" data-i18n="nav.about">О нас</a></li>
-        <li><a href="./#faq" data-i18n="nav.faq">Вопросы</a></li>
-        <li><a href="./#contacts" data-i18n="nav.contacts">Контакты</a></li>
-      </ul>
+      {{FOOTER_NAV}}
     </div>
     <div>
       <p class="footer__h" data-i18n="footer.contacts">Контакты</p>
@@ -27,10 +20,10 @@
     </div>
     <div>
       <p class="footer__h" data-i18n="footer.social">Мы в сети</p>
-      <ul class="footer__links">
-        <li><a href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a class="js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://t.me/+992944949999" target="_blank" rel="noopener">Telegram</a></li>
+      <ul class="footer__links footer__links--icons">
+        <li><a href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+        <li><a class="js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a></li>
+        <li><a href="https://t.me/+992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a></li>
       </ul>
     </div>
   </div>
@@ -94,7 +87,7 @@
       <h3 class="modal__title" id="modal-title"></h3>
       <div class="modal__body"></div>
       <div class="modal__price"><span data-i18n="svc.priceLabel">Стоимость</span><b data-i18n="svc.price">после осмотра</b></div>
-      <button class="modal__link" type="button" hidden><span></span><svg class="ic"><use href="#i-arrow"/></svg></button>
+      <a class="modal__link" href="services.html" hidden><span></span><svg class="ic"><use href="#i-arrow"/></svg></a>
       <div class="modal__actions">
         <a class="btn btn--red btn--block modal__cta" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="modal__cta-text"></span></a>
         <a class="btn btn--ghost btn--block" href="tel:+992944949999"><svg class="ic"><use href="#i-phone"/></svg><span data-i18n="cta.call">Позвонить</span></a>

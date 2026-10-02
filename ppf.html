@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Бронеплёнка — АвтоСервис 999, Душанбе</title>
-  <meta name="description" content="Оклейка бронеплёнкой в Душанбе: защита кузова и смена цвета без покраски, гарантия на плёнку 10 лет. Кейс Hennessey VelociRaptor и правила ухода.">
+  <meta name="description" content="Оклейка бронеплёнкой в Душанбе: защита кузова и смена цвета без покраски, гарантия на плёнку 10 лет. Правила ухода.">
   <meta name="theme-color" content="#0A0A0B">
   <link rel="canonical" href="https://soyarkulovumed-dev.github.io/sto999/ppf.html">
   <meta property="og:type" content="website">
@@ -19,11 +19,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261002">
+  <link rel="stylesheet" href="css/styles.css?v=20261003">
   <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("sto999-theme")==="light")document.documentElement.setAttribute("data-site-theme","light")}catch(e){}</script>
   
 </head>
-<body  data-page="ppf">
+<body data-page="ppf">
 
 <!-- ============ ICON SPRITE ============ -->
 <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +57,12 @@
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z"/></symbol>
     <symbol id="i-vin" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10v4M8.5 10v4M10 10v4M13 10v4M14.5 10v4M17.5 10v4"/></symbol>
+    <symbol id="i-nut" viewBox="0 0 24 24"><path d="M12 2.8l7.9 4.6v9.2L12 21.2l-7.9-4.6V7.4z"/><circle cx="12" cy="12" r="3.4"/></symbol>
+    <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M10 9.2v5.6l4.6-2.8z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+    <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2.1-2.4 3.6M12 16.9v.1"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/></symbol>
   </defs>
 </svg>
 
@@ -82,12 +88,12 @@
     </a>
 
     <nav class="nav" aria-label="Основное меню">
-      <a href="./#services" data-nav="services" data-i18n="nav.services">Услуги</a>
+      <a href="services.html" data-nav="services" data-i18n="nav.services">Услуги</a>
       <a href="ppf.html" data-nav="ppf" data-i18n="nav.ppf">Бронеплёнка</a>
+      <a href="cases.html" data-nav="cases" data-i18n="nav.cases">Кейсы</a>
       <a href="works.html" data-nav="works" data-i18n="nav.works">Работы</a>
       <a href="about.html" data-nav="about" data-i18n="nav.about">О нас</a>
-      <a href="./#faq" data-nav="faq" data-i18n="nav.faq">Вопросы</a>
-      <a href="./#contacts" data-nav="contacts" data-i18n="nav.contacts">Контакты</a>
+      <a href="contacts.html" data-nav="contacts" data-i18n="nav.contacts">Контакты</a>
     </nav>
 
     <div class="header__actions">
@@ -106,25 +112,36 @@
   </div>
 </header>
 
-<!-- mobile menu -->
+<!-- full menu (burger) -->
 <div class="mmenu" id="mobile-menu" hidden>
-  <nav class="mmenu__nav" aria-label="Мобильное меню">
-    <a href="./#services" data-nav="services"><i>01</i><span data-i18n="nav.services">Услуги</span></a>
-    <a href="ppf.html" data-nav="ppf"><i>02</i><span data-i18n="nav.ppf">Бронеплёнка</span></a>
-    <a href="works.html" data-nav="works"><i>03</i><span data-i18n="nav.works">Работы</span></a>
-    <a href="about.html" data-nav="about"><i>04</i><span data-i18n="nav.about">О нас</span></a>
-    <a href="./#faq" data-nav="faq"><i>05</i><span data-i18n="nav.faq">Вопросы</span></a>
-    <a href="./#contacts" data-nav="contacts"><i>06</i><span data-i18n="nav.contacts">Контакты</span></a>
-  </nav>
-  <div class="mmenu__foot">
-    <div class="lang lang--lg" role="group" aria-label="Язык / Забон / Language">
-      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
-      <button type="button" data-lang="tj" aria-pressed="false">TJ</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
-    </div>
-    <a class="mmenu__phone" href="tel:+992944949999">+992 944 94 9999</a>
-    <a class="mmenu__phone" href="tel:+992446109999">+992 44 610 9999</a>
-    <p class="mmenu__addr" data-i18n="contact.addressShort">Душанбе, ул. Н. Карабаева, 43/3</p>
+  <div class="mmenu__inner container">
+    <nav class="mmenu__nav" aria-label="Все разделы">
+      <a href="./" data-nav="index"><span class="mmenu__ic"><svg class="ic"><use href="#i-home"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.home">Главная</b><small data-i18n="menu.index.d">Видео и главное о нас</small></span><i class="mmenu__n">00</i></a>
+      <a href="services.html" data-nav="services"><span class="mmenu__ic"><svg class="ic"><use href="#i-nut"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.services">Услуги</b><small data-i18n="menu.services.d">7 направлений и что в них входит</small></span><i class="mmenu__n">01</i></a>
+      <a href="ppf.html" data-nav="ppf"><span class="mmenu__ic"><svg class="ic"><use href="#i-ppf"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.ppf">Бронеплёнка</b><small data-i18n="menu.ppf.d">Защита кузова и смена цвета</small></span><i class="mmenu__n">02</i></a>
+      <a href="cases.html" data-nav="cases"><span class="mmenu__ic"><svg class="ic"><use href="#i-case"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.cases">Кейсы</b><small data-i18n="menu.cases.d">Lexus RX и Hennessey VelociRaptor</small></span><i class="mmenu__n">03</i></a>
+      <a href="works.html" data-nav="works"><span class="mmenu__ic"><svg class="ic"><use href="#i-film"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.works">Работы</b><small data-i18n="menu.works.d">Как работают мастера и этапы ремонта</small></span><i class="mmenu__n">04</i></a>
+      <a href="team.html" data-nav="team"><span class="mmenu__ic"><svg class="ic"><use href="#i-team"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.team">Команда</b><small data-i18n="menu.team.d">Кто отвечает за каждое направление</small></span><i class="mmenu__n">05</i></a>
+      <a href="about.html" data-nav="about"><span class="mmenu__ic"><svg class="ic"><use href="#i-info"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.about">О нас</b><small data-i18n="menu.about.d">Почему мы и кафе 999</small></span><i class="mmenu__n">06</i></a>
+      <a href="faq.html" data-nav="faq"><span class="mmenu__ic"><svg class="ic"><use href="#i-question"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.faq">Вопросы</b><small data-i18n="menu.faq.d">Ответы на частые вопросы</small></span><i class="mmenu__n">07</i></a>
+      <a href="contacts.html" data-nav="contacts"><span class="mmenu__ic"><svg class="ic"><use href="#i-pin"/></svg></span><span class="mmenu__txt"><b data-i18n="nav.contacts">Контакты</b><small data-i18n="menu.contacts.d">Адрес, телефоны и запись</small></span><i class="mmenu__n">08</i></a>
+    </nav>
+    <aside class="mmenu__side">
+      <div class="lang lang--lg" role="group" aria-label="Язык / Забон / Language">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="tj" aria-pressed="false">TJ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="mmenu__phone" href="tel:+992944949999">+992 944 94 9999</a>
+      <a class="mmenu__phone" href="tel:+992446109999">+992 44 610 9999</a>
+      <p class="mmenu__addr" data-i18n="contact.addressShort">Душанбе, ул. Н. Карабаева, 43/3</p>
+      <div class="mmenu__social">
+        <a href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+        <a class="js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+        <a href="https://t.me/+992944949999" target="_blank" rel="noopener" aria-label="Telegram"><svg class="ic"><use href="#i-tg"/></svg></a>
+      </div>
+      <a class="btn btn--red btn--lg js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="cta.waBook">Записаться в WhatsApp</span></a>
+    </aside>
   </div>
 </div>
 
@@ -133,7 +150,7 @@
 <section class="page-hero">
   <div class="page-hero__bg" aria-hidden="true" style="background-image: url('assets/img/ppf-after.webp')"></div>
   <div class="container page-hero__inner">
-    <nav class="crumbs" aria-label="Навигация"><a href="./" data-i18n="crumbs.home">Главная</a><span aria-hidden="true">/</span><span data-i18n="nav.ppf">Бронеплёнка</span></nav>
+    <nav class="crumbs" aria-label="Навигация"><a href="./" data-i18n="nav.home">Главная</a><span aria-hidden="true">/</span><span data-i18n="nav.ppf">Бронеплёнка</span></nav>
     <h1 class="page-hero__title reveal-title"><span class="line"><span data-i18n="page.ppf.t">Бронеплёнка</span></span></h1>
     <p class="page-hero__lead reveal" data-i18n="page.ppf.lead">Защищаем кузов от сколов и царапин и меняем цвет без покраски. Гарантия на плёнку — 10 лет.</p>
   </div>
@@ -230,13 +247,15 @@
     </div>
     <div>
       <p class="footer__h" data-i18n="footer.nav">Навигация</p>
-      <ul class="footer__links">
-        <li><a href="./#services" data-i18n="nav.services">Услуги</a></li>
-        <li><a href="ppf.html" data-i18n="nav.ppf">Бронеплёнка</a></li>
-        <li><a href="works.html" data-i18n="nav.works">Работы</a></li>
-        <li><a href="about.html" data-i18n="nav.about">О нас</a></li>
-        <li><a href="./#faq" data-i18n="nav.faq">Вопросы</a></li>
-        <li><a href="./#contacts" data-i18n="nav.contacts">Контакты</a></li>
+      <ul class="footer__links footer__links--icons footer__links--cols">
+        <li><a href="services.html" data-nav="services"><svg class="ic"><use href="#i-nut"/></svg><span data-i18n="nav.services">Услуги</span></a></li>
+        <li><a href="ppf.html" data-nav="ppf"><svg class="ic"><use href="#i-ppf"/></svg><span data-i18n="nav.ppf">Бронеплёнка</span></a></li>
+        <li><a href="cases.html" data-nav="cases"><svg class="ic"><use href="#i-case"/></svg><span data-i18n="nav.cases">Кейсы</span></a></li>
+        <li><a href="works.html" data-nav="works"><svg class="ic"><use href="#i-film"/></svg><span data-i18n="nav.works">Работы</span></a></li>
+        <li><a href="team.html" data-nav="team"><svg class="ic"><use href="#i-team"/></svg><span data-i18n="nav.team">Команда</span></a></li>
+        <li><a href="about.html" data-nav="about"><svg class="ic"><use href="#i-info"/></svg><span data-i18n="nav.about">О нас</span></a></li>
+        <li><a href="faq.html" data-nav="faq"><svg class="ic"><use href="#i-question"/></svg><span data-i18n="nav.faq">Вопросы</span></a></li>
+        <li><a href="contacts.html" data-nav="contacts"><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="nav.contacts">Контакты</span></a></li>
       </ul>
     </div>
     <div>
@@ -250,10 +269,10 @@
     </div>
     <div>
       <p class="footer__h" data-i18n="footer.social">Мы в сети</p>
-      <ul class="footer__links">
-        <li><a href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a class="js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://t.me/+992944949999" target="_blank" rel="noopener">Telegram</a></li>
+      <ul class="footer__links footer__links--icons">
+        <li><a href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+        <li><a class="js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a></li>
+        <li><a href="https://t.me/+992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a></li>
       </ul>
     </div>
   </div>
@@ -317,7 +336,7 @@
       <h3 class="modal__title" id="modal-title"></h3>
       <div class="modal__body"></div>
       <div class="modal__price"><span data-i18n="svc.priceLabel">Стоимость</span><b data-i18n="svc.price">после осмотра</b></div>
-      <button class="modal__link" type="button" hidden><span></span><svg class="ic"><use href="#i-arrow"/></svg></button>
+      <a class="modal__link" href="services.html" hidden><span></span><svg class="ic"><use href="#i-arrow"/></svg></a>
       <div class="modal__actions">
         <a class="btn btn--red btn--block modal__cta" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span class="modal__cta-text"></span></a>
         <a class="btn btn--ghost btn--block" href="tel:+992944949999"><svg class="ic"><use href="#i-phone"/></svg><span data-i18n="cta.call">Позвонить</span></a>
@@ -326,7 +345,7 @@
   </div>
 </div>
 
-<script src="js/i18n.js?v=20261002"></script>
-<script src="js/main.js?v=20261002"></script>
+<script src="js/i18n.js?v=20261003"></script>
+<script src="js/main.js?v=20261003"></script>
 </body>
 </html>

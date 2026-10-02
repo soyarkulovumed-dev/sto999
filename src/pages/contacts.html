@@ -1,0 +1,83 @@
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true" style="background-image: url('assets/img/place-sign.webp')"></div>
+  <div class="container page-hero__inner">
+    <nav class="crumbs" aria-label="Навигация"><a href="./" data-i18n="nav.home">Главная</a><span aria-hidden="true">/</span><span data-i18n="nav.contacts">Контакты</span></nav>
+    <h1 class="page-hero__title reveal-title"><span class="line"><span data-i18n="page.contacts.t">Контакты</span></span></h1>
+    <p class="page-hero__lead reveal" data-i18n="page.contacts.lead">Приезжайте на Н. Карабаева, 43/3 или напишите нам — ответим в рабочее время.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="section contacts" id="contacts">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__num"><span>01</span> / <span data-i18n="contact.kicker">Контакты</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="contact.t1">Приезжайте</span></span>
+        <span class="line"><span class="accent" data-i18n="contact.t2">или напишите</span></span>
+      </h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-pin"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.addrLabel">Адрес</p><p class="cinfo__val" data-i18n="contact.address">г. Душанбе, ул. Н. Карабаева, 43/3</p></div>
+        </div>
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-phone"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.phoneLabel">Телефоны</p>
+            <p class="cinfo__val"><a href="tel:+992944949999">+992 944 94 9999</a></p>
+            <p class="cinfo__val"><a href="tel:+992446109999">+992 44 610 9999</a></p>
+          </div>
+        </div>
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-clock"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.hoursLabel">Режим работы</p><p class="cinfo__val" data-i18n="contact.hours">Пн–Сб: 08:00–19:00</p><p class="status js-status"><span class="dot js-open-dot"></span><span class="js-status-text"></span></p></div>
+        </div>
+        <div class="socials">
+          <a class="social social--wa js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <a class="social social--tg" href="https://t.me/+992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a>
+          <a class="social social--ig" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span>Instagram</span></a>
+        </div>
+        <figure class="landmark">
+          <img src="assets/img/place-sign.webp" alt="Вывеска «Автосервис 999» на крыше здания" loading="lazy" width="1080" height="729">
+          <figcaption><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="contact.landmark">Ориентир — вывеска «Автосервис 999» на крыше</span></figcaption>
+        </figure>
+        <div class="map">
+          <iframe title="Карта: АвтоСервис 999" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=%D0%94%D1%83%D1%88%D0%B0%D0%BD%D0%B1%D0%B5%2C+%D0%9D.+%D0%9A%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+43%2F3&z=16&output=embed"></iframe>
+          <a class="map__open" href="https://www.google.com/maps/search/?api=1&query=%D0%94%D1%83%D1%88%D0%B0%D0%BD%D0%B1%D0%B5%2C+%D0%9D.+%D0%9A%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+43%2F3" target="_blank" rel="noopener"><span data-i18n="contact.route">Построить маршрут</span><svg class="ic"><use href="#i-arrow-ne"/></svg></a>
+        </div>
+      </div>
+
+      <form class="booking reveal" novalidate>
+        <h3 class="booking__title" data-i18n="form.title">Запись на осмотр</h3>
+        <p class="booking__sub" data-i18n="form.sub">Заполните форму — она откроет WhatsApp с готовым сообщением. Мы ответим в рабочее время.</p>
+        <label class="field"><span data-i18n="form.name">Ваше имя</span><input name="name" type="text" autocomplete="name" required maxlength="60"></label>
+        <label class="field"><span data-i18n="form.phone">Телефон</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+992 ___ __ ____"></label>
+        <label class="field"><span data-i18n="form.car">Марка и модель авто</span><input name="car" type="text" maxlength="60" data-i18n-attr="placeholder:form.carPh" placeholder="Например, Toyota Camry"></label>
+        <label class="field"><span data-i18n="form.service">Услуга</span>
+          <select name="service">
+            <option value="wash" data-i18n="svc.wash.t">Автомойка</option>
+            <option value="polish" data-i18n="svc.polish.t">Полировка</option>
+            <option value="body" data-i18n="svc.body.t">Жестянка</option>
+            <option value="pdr" data-i18n="svc.pdr.t">PDR — вмятины без покраски</option>
+            <option value="paint" data-i18n="svc.paint.t">Покраска авто</option>
+            <option value="mech" data-i18n="svc.mech.t">Механика и диагностика</option>
+            <option value="ppf" data-i18n="svc.ppf.t">Бронеплёнка</option>
+            <option value="other" data-i18n="form.other">Другое / не знаю</option>
+          </select>
+        </label>
+        <label class="field"><span data-i18n="form.msg">Комментарий</span><textarea name="msg" rows="3" maxlength="500" data-i18n-attr="placeholder:form.msgPh" placeholder="Что случилось с машиной?"></textarea></label>
+        <p class="booking__err" role="alert" aria-live="polite"></p>
+        <button class="btn btn--red btn--lg btn--block magnetic" type="submit"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="form.submit">Отправить в WhatsApp</span></button>
+        <div class="booking__done" role="status" hidden>
+          <p class="booking__ready"></p>
+          <a class="btn btn--ghost btn--block" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span></span></a>
+        </div>
+        <p class="booking__alt"><span data-i18n="form.or">или</span> <a href="https://t.me/+992944949999" target="_blank" rel="noopener" data-i18n="form.tg">написать в Telegram</a></p>
+      </form>
+    </div>
+  </div>
+</section>
