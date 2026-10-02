@@ -12,17 +12,17 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
 BASE = "https://soyarkulovumed-dev.github.io/sto999/"
-VERSION = "20261006"  # bump to make returning visitors fetch new CSS/JS
+VERSION = "20261007"  # bump to make returning visitors fetch new CSS/JS
 
 # key, link, Russian title, icon, Russian description, shown in the header bar
 NAV = [
     ("index", "./", "Главная", "i-home", "Видео и главное о нас", False),
-    ("services", "services.html", "Услуги", "i-nut", "7 направлений и что в них входит", True),
-    ("ppf", "ppf.html", "Бронеплёнка", "i-ppf", "Защита кузова и смена цвета", True),
-    ("cases", "cases.html", "Кейсы", "i-case", "Lexus RX и Hennessey VelociRaptor", True),
-    ("works", "works.html", "Работы", "i-film", "Как работают мастера и этапы ремонта", True),
-    ("team", "team.html", "Команда", "i-team", "Кто отвечает за каждое направление", False),
     ("about", "about.html", "О нас", "i-info", "Почему мы и кафе 999", True),
+    ("services", "services.html", "Услуги", "i-nut", "7 направлений и что в них входит", True),
+    ("works", "works.html", "Работы", "i-film", "Как работают мастера и этапы ремонта", True),
+    ("cases", "cases.html", "Кейсы", "i-case", "Lexus RX и Hennessey VelociRaptor", True),
+    ("ppf", "ppf.html", "Бронеплёнка", "i-ppf", "Защита кузова и смена цвета", True),
+    ("team", "team.html", "Команда", "i-team", "Кто отвечает за каждое направление", False),
     ("faq", "faq.html", "Вопросы", "i-question", "Ответы на частые вопросы", False),
     ("contacts", "contacts.html", "Контакты", "i-pin", "Адрес, телефоны и запись", True),
 ]
