@@ -80,8 +80,6 @@ window.I18N = {
     "cta.waBook": "Сабти ном дар WhatsApp",
     "cta.call": "Занг задан",
     "cta.callShort": "Занг",
-
-    "hero.eyebrow": "СТО · Душанбе · Душанбе–Шанбе 08:00–19:00",
     "hero.title1": "Автосервис",
     "hero.lead": "Кузов, рангубор, PDR, бронеплёнка, полировка, мойка ва механика — ҳамааш дар як ҷо. Ҳар кас кори худро медонад.",
     "hero.f1": "самти корӣ",
@@ -100,7 +98,7 @@ window.I18N = {
     "services.extra": "Инчунин мо иҷро мекунем",
     "svc.more": "Муфассал",
     "svc.priceLabel": "Нарх",
-    "svc.price": "баъди муоина",
+    "svc.price": "Баъди муоина",
     "svc.askPrice": "Нархро дар WhatsApp пурсед",
 
     "svc.wash.t": "Автомойка",
@@ -440,8 +438,6 @@ window.I18N = {
     "cta.waBook": "Book on WhatsApp",
     "cta.call": "Call us",
     "cta.callShort": "Call",
-
-    "hero.eyebrow": "Car service · Dushanbe · Mon–Sat 08:00–19:00",
     "hero.title1": "Autoservice",
     "hero.lead": "Bodywork, paint, PDR, paint protection film, polishing, car wash and mechanics — all in one place. Every specialist knows their craft.",
     "hero.f1": "service areas",
@@ -460,7 +456,7 @@ window.I18N = {
     "services.extra": "We also do",
     "svc.more": "Details",
     "svc.priceLabel": "Price",
-    "svc.price": "after inspection",
+    "svc.price": "After inspection",
     "svc.askPrice": "Ask for a price on WhatsApp",
 
     "svc.wash.t": "Car wash",
