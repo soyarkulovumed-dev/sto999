@@ -47,7 +47,7 @@
     <div class="fact"><b class="fact__time">08:00–19:00</b><span data-i18n="hero.f4">понедельник — суббота</span></div>
   </div>
 
-  <a class="hero__scroll" href="#sections" aria-label="Листать вниз"><span></span></a>
+  <a class="hero__scroll" href="#services" aria-label="Листать вниз"><span></span></a>
 </section>
 
 <!-- ============ MARQUEE ============ -->
@@ -58,68 +58,482 @@
   </div>
 </div>
 
-<!-- ============ SECTIONS ============ -->
-<section class="section sections" id="sections">
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__num"><span>01</span> / <span data-i18n="services.kicker">Услуги</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="services.t1">Семь направлений.</span></span>
+        <span class="line"><span data-i18n="services.t2">Один сервис.</span></span>
+      </h2>
+      <p class="section__lead reveal" data-i18n="services.lead">У каждого направления — свой мастер. Нажмите на услугу, чтобы узнать, что в неё входит, и спросить цену в WhatsApp.</p>
+    </div>
+
+    <div class="svc-grid">
+      <!-- 1. wash -->
+      <article class="svc glow reveal" id="svc-wash" data-svc="wash" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-wash.webp" alt="Автомобиль в активной пене на мойке" loading="lazy" width="1600" height="840"></div>
+        <div class="svc__top"><span class="svc__n">01</span><svg class="svc__ic"><use href="#i-wash"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.wash.t">Автомойка</h3>
+        <p class="svc__short" data-i18n="svc.wash.s">Бережная мойка кузова и салона — бесплатно после любого ремонта.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.wash.d">Моем бесконтактно и вручную, с правильной химией и чистой микрофиброй. Автомобили с бронеплёнкой моем по правилам: без высокого давления у кромок и стыков плёнки.</p>
+          <ul>
+            <li data-i18n="svc.wash.l1">Бесконтактная мойка кузова</li>
+            <li data-i18n="svc.wash.l2">Комплексная мойка кузова и салона</li>
+            <li data-i18n="svc.wash.l3">Химчистка салона</li>
+            <li data-i18n="svc.wash.l4">Бережная мойка авто с бронеплёнкой</li>
+            <li data-i18n="svc.wash.l5">Комплексная мойка в подарок после ремонта</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2. polish -->
+      <article class="svc glow reveal" id="svc-polish" data-svc="polish" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-polish.webp" alt="Отражение ламп на отполированном капоте" loading="lazy" width="1600" height="939"></div>
+        <div class="svc__top"><span class="svc__n">02</span><svg class="svc__ic"><use href="#i-polish"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.polish.t">Полировка</h3>
+        <p class="svc__short" data-i18n="svc.polish.s">Возвращаем глубину цвета и убираем мелкие царапины.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.polish.d">Восстановительная полировка снимает тонкий повреждённый слой лака: уходят мелкие царапины, голограммы и помутнение. После этого защищаем результат, чтобы блеск держался дольше.</p>
+          <ul>
+            <li data-i18n="svc.polish.l1">Восстановительная полировка кузова</li>
+            <li data-i18n="svc.polish.l2">Удаление мелких царапин и голограмм</li>
+            <li data-i18n="svc.polish.l3">Полировка фар</li>
+            <li data-i18n="svc.polish.l4">Защитное покрытие после полировки</li>
+            <li data-i18n="svc.polish.l5">Предпродажная подготовка</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 3. body -->
+      <article class="svc glow reveal" id="svc-body" data-svc="body" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-body.webp" alt="Сварка кузовной детали" loading="lazy" width="1600" height="920"></div>
+        <div class="svc__top"><span class="svc__n">03</span><svg class="svc__ic"><use href="#i-body"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.body.t">Жестянка</h3>
+        <p class="svc__short" data-i18n="svc.body.s">Кузовной ремонт после ДТП — с точной геометрией и зазорами.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.body.d">Всё начинается с осмотра: мастер оценивает повреждение и решает, с какого участка начать. Затем кузов разбирают, металл вытягивают, рихтуют, при необходимости сваривают и зачищают. Мы не спешим — каждое движение влияет на линии кузова и зазоры.</p>
+          <ul>
+            <li data-i18n="svc.body.l1">Осмотр и оценка повреждений</li>
+            <li data-i18n="svc.body.l2">Разборка и дефектовка</li>
+            <li data-i18n="svc.body.l3">Вытяжка и рихтовка металла</li>
+            <li data-i18n="svc.body.l4">Сварочные работы</li>
+            <li data-i18n="svc.body.l5">Замена кузовных элементов</li>
+            <li data-i18n="svc.body.l6">Выставление зазоров и сборка</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4. pdr -->
+      <article class="svc glow reveal" id="svc-pdr" data-svc="pdr" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-pdr.webp" alt="Мастер PDR убирает вмятину без покраски" loading="lazy" width="1600" height="1000"></div>
+        <div class="svc__top"><span class="svc__n">04</span><svg class="svc__ic"><use href="#i-pdr"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.pdr.t">PDR — вмятины без покраски</h3>
+        <p class="svc__short" data-i18n="svc.pdr.s">Убираем вмятины, сохраняя заводскую краску.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.pdr.d">Мастер PDR аккуратно выдавливает вмятину специальным инструментом с обратной стороны детали. Родное лакокрасочное покрытие остаётся на месте, а ремонт обычно занимает меньше времени, чем покраска.</p>
+          <ul>
+            <li data-i18n="svc.pdr.l1">Парковочные вмятины</li>
+            <li data-i18n="svc.pdr.l2">Следы от града</li>
+            <li data-i18n="svc.pdr.l3">Двери, крылья, капот, крыша</li>
+            <li data-i18n="svc.pdr.l4">Сохранение заводского ЛКП</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 5. paint -->
+      <article class="svc glow reveal" id="svc-paint" data-svc="paint" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-paint.webp" alt="Покраска детали в покрасочной камере" loading="lazy" width="1600" height="1200"></div>
+        <div class="svc__top"><span class="svc__n">05</span><svg class="svc__ic"><use href="#i-paint"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.paint.t">Покраска авто</h3>
+        <p class="svc__short" data-i18n="svc.paint.s">Локальная и полная покраска с точным подбором цвета.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.paint.d">Готовим поверхность, подбираем цвет, красим и покрываем лаком. Цель одна — чтобы окрашенная деталь не отличалась от соседних ни по цвету, ни по блеску.</p>
+          <ul>
+            <li data-i18n="svc.paint.l1">Подготовка и грунтование</li>
+            <li data-i18n="svc.paint.l2">Подбор цвета</li>
+            <li data-i18n="svc.paint.l3">Покраска отдельных элементов</li>
+            <li data-i18n="svc.paint.l4">Полная покраска кузова</li>
+            <li data-i18n="svc.paint.l5">Лак и финишная полировка</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 6. mech -->
+      <article class="svc glow reveal" id="svc-mech" data-svc="mech" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-mech.webp" alt="Компьютерная диагностика автомобиля" loading="lazy" width="1600" height="840"></div>
+        <div class="svc__top"><span class="svc__n">06</span><svg class="svc__ic"><use href="#i-mech"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.mech.t">Механика и диагностика</h3>
+        <p class="svc__short" data-i18n="svc.mech.s">Диагностика, ходовая, масло, электрика и электромобили.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.mech.d">Сначала находим причину, потом ремонтируем: компьютерная диагностика, проверка ходовой и электрики. Обслуживаем все виды электромобилей и заказываем запчасти по VIN-коду.</p>
+          <ul>
+            <li data-i18n="svc.mech.l1">Компьютерная диагностика</li>
+            <li data-i18n="svc.mech.l2">Ремонт ходовой части</li>
+            <li data-i18n="svc.mech.l3">Замена масла и фильтров</li>
+            <li data-i18n="svc.mech.l4">Автоэлектрика</li>
+            <li data-i18n="svc.mech.l5">Ремонт электромобилей</li>
+            <li data-i18n="svc.mech.l6">Заказ запчастей по VIN</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7. ppf -->
+      <article class="svc svc--accent svc--wide glow reveal" id="svc-ppf" data-svc="ppf" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc__media"><img src="assets/img/svc-ppf.webp" alt="Нанесение бронеплёнки на кузов" loading="lazy" width="1600" height="860"></div>
+        <div class="svc__top"><span class="svc__n">07</span><svg class="svc__ic"><use href="#i-ppf"/></svg></div>
+        <h3 class="svc__title" data-i18n="svc.ppf.t">Бронеплёнка</h3>
+        <p class="svc__short" data-i18n="svc.ppf.s">Защита кузова и смена цвета. Гарантия на плёнку — 10 лет.</p>
+        <span class="svc__more"><span data-i18n="svc.more">Подробнее</span><svg class="ic"><use href="#i-arrow"/></svg></span>
+        <div class="svc__detail" hidden>
+          <p data-i18n="svc.ppf.d">Плёнка защищает лакокрасочное покрытие от сколов, царапин и дорожной грязи, а мелкие царапины на ней затягиваются сами. Чёрная или цветная плёнка полностью меняет цвет автомобиля без покраски.</p>
+          <ul>
+            <li data-i18n="svc.ppf.l1">Полная оклейка кузова</li>
+            <li data-i18n="svc.ppf.l2">Оклейка зон риска: капот, бампер, фары</li>
+            <li data-i18n="svc.ppf.l3">Смена цвета плёнкой</li>
+            <li data-i18n="svc.ppf.l4">Эффект самовосстановления</li>
+            <li data-i18n="svc.ppf.l5">Разборка и сборка для аккуратных кромок</li>
+            <li data-i18n="svc.ppf.l6">Гарантия на плёнку — 10 лет</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="extra reveal">
+      <p class="extra__label" data-i18n="services.extra">Ещё мы делаем</p>
+      <ul class="extra__list">
+        <li data-i18n="extra.1">Детейлинг</li>
+        <li data-i18n="extra.2">Химчистка салона</li>
+        <li data-i18n="extra.3">Автоэлектрика</li>
+        <li data-i18n="extra.4">Компьютерная диагностика</li>
+        <li data-i18n="extra.5">Ремонт ходовой</li>
+        <li data-i18n="extra.6">Замена масла и фильтров</li>
+        <li data-i18n="extra.7">Ремонт электромобилей</li>
+        <li data-i18n="extra.8">Запчасти по VIN-коду</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFTER AN ACCIDENT ============ -->
+<section class="section dtp-sec" id="after-accident">
+  <div class="container">
+    <div class="dtp reveal">
+      <div class="dtp__quote">
+        <p class="dtp__kicker" data-i18n="dtp.kicker">После ДТП</p>
+        <blockquote data-i18n="dtp.quote">Одна машина. Одно СТО. Много решённых задач.</blockquote>
+      </div>
+      <ul class="dtp__list">
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.1">Кузовной ремонт и покраска</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.2">Удаление вмятин методом PDR</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.3">Электрика и диагностика</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.4">Ремонт ходовой части</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.5">Замена масла и фильтров</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="dtp.6">Полировка, детейлинг и бронеплёнка</span></li>
+        <li class="dtp__gift"><svg class="ic"><use href="#i-gift"/></svg><span data-i18n="dtp.7">И бесплатная комплексная мойка после ремонта</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__num"><span>02</span> / <span data-i18n="process.kicker">Как мы работаем</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="process.t1">От заявки</span></span>
+        <span class="line"><span data-i18n="process.t2">до чистой машины</span></span>
+      </h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step__n">01</span><h3 data-i18n="step.1t">Заявка</h3><p data-i18n="step.1d">Звонок, WhatsApp или Telegram. Можно сразу прислать фото повреждения.</p></li>
+      <li class="step reveal"><span class="step__n">02</span><h3 data-i18n="step.2t">Осмотр и диагностика</h3><p data-i18n="step.2d">Профильный мастер осматривает автомобиль и определяет объём работ.</p></li>
+      <li class="step reveal"><span class="step__n">03</span><h3 data-i18n="step.3t">Цена и сроки</h3><p data-i18n="step.3d">Называем стоимость и срок после осмотра. Начинаем только после вашего согласия.</p></li>
+      <li class="step reveal"><span class="step__n">04</span><h3 data-i18n="step.4t">Работа мастера</h3><p data-i18n="step.4d">Каждый этап делает специалист своего направления — правильным инструментом.</p></li>
+      <li class="step reveal"><span class="step__n">05</span><h3 data-i18n="step.5t">Контроль качества</h3><p data-i18n="step.5d">Проверяем результат: геометрию, зазоры, цвет, работу систем.</p></li>
+      <li class="step reveal"><span class="step__n">06</span><h3 data-i18n="step.6t">Выдача + мойка</h3><p data-i18n="step.6d">Отдаём автомобиль после бесплатной комплексной мойки.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ WORKS (reels) ============ -->
+<section class="section reels-sec" id="works">
   <div class="container">
     <div class="section__head section__head--split">
       <div>
-        <p class="section__num"><span>01</span> / <span data-i18n="sections.kicker">Разделы</span></p>
+        <p class="section__num"><span>03</span> / <span data-i18n="works.kicker">Работы</span></p>
         <h2 class="section__title reveal-title">
-          <span class="line"><span data-i18n="sections.t1">Всё о нашем</span></span>
-          <span class="line"><span class="accent">СТО</span></span>
+          <span class="line"><span data-i18n="reels.t1">Как работают</span></span>
+          <span class="line"><span class="accent" data-i18n="reels.t2">мастера</span></span>
         </h2>
       </div>
-      <p class="section__lead reveal" data-i18n="sections.lead">Каждая тема открывается на отдельной странице — выберите, что вам интересно.</p>
+      <a class="btn btn--ghost magnetic reveal" href="cases.html"><span data-i18n="works.cases">Смотреть кейсы</span><svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="bento">
-      <a class="tile tile--services reveal" href="services.html">
-        <div class="tile__media"><img src="assets/img/svc-body.webp" alt="" loading="lazy"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-nut"/></svg></span><span class="tile__n">01</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.services">Услуги</h3><p class="tile__desc" data-i18n="menu.services.d">7 направлений и что в них входит</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
+    <div class="reels">
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/reel/DcxpY3yI81U/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-body.mp4" data-poster="assets/video/work-body.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag" data-i18n="reel.1tag">Жестянка</p><h3 data-i18n="reel.1t">Рихтовка и вытяжка металла</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
       </a>
-      <a class="tile tile--ppf reveal" href="ppf.html">
-        <div class="tile__media"><img src="assets/img/ppf-after.webp" alt="" loading="lazy"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-ppf"/></svg></span><span class="tile__n">02</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.ppf">Бронеплёнка</h3><p class="tile__desc" data-i18n="menu.ppf.d">Защита кузова и смена цвета</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-pdr.mp4" data-poster="assets/video/work-pdr.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag">PDR</p><h3 data-i18n="reel.2t">Вмятина уходит — краска остаётся</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
       </a>
-      <a class="tile tile--cases reveal" href="cases.html">
-        <div class="tile__media"><img src="assets/img/lexus-after.webp" alt="" loading="lazy"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-case"/></svg></span><span class="tile__n">03</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.cases">Кейсы</h3><p class="tile__desc" data-i18n="menu.cases.d">Lexus RX и Hennessey VelociRaptor</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-ev.mp4" data-poster="assets/video/work-ev.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag" data-i18n="reel.3tag">Электромобили</p><h3 data-i18n="reel.3t">Диагностика и ремонт батареи</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
       </a>
-      <a class="tile tile--works reveal" href="works.html">
-        <div class="tile__media" data-video="assets/video/work-day.mp4" data-poster="assets/video/work-day.jpg"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-film"/></svg></span><span class="tile__n">04</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.works">Работы</h3><p class="tile__desc" data-i18n="menu.works.d">Как работают мастера и этапы ремонта</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
+      <a class="reel reveal" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener">
+        <div class="reel__media" data-video="assets/video/work-day.mp4" data-poster="assets/video/work-day.jpg"></div>
+        <div class="reel__cap"><p class="reel__tag">СТО999</p><h3 data-i18n="reel.4t">Один день в сервисе</h3></div>
+        <span class="reel__play"><svg class="ic"><use href="#i-play"/></svg></span>
       </a>
-      <a class="tile tile--team reveal" href="team.html">
-        <div class="tile__media"><img src="assets/img/team-4.webp" alt="" loading="lazy"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-team"/></svg></span><span class="tile__n">05</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.team">Команда</h3><p class="tile__desc" data-i18n="menu.team.d">Кто отвечает за каждое направление</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
-      </a>
-      <a class="tile tile--about reveal" href="about.html">
-        <div class="tile__media"><img src="assets/img/place-sign.webp" alt="" loading="lazy"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-info"/></svg></span><span class="tile__n">06</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.about">О нас</h3><p class="tile__desc" data-i18n="menu.about.d">Почему мы и кафе 999</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
-      </a>
-      <a class="tile tile--faq reveal" href="faq.html">
-        <div class="tile__media tile__media--plain" aria-hidden="true"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-question"/></svg></span><span class="tile__n">07</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.faq">Вопросы</h3><p class="tile__desc" data-i18n="menu.faq.d">Ответы на частые вопросы</p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
-      </a>
-      <a class="tile tile--contacts reveal" href="contacts.html">
-        <div class="tile__media tile__media--plain" aria-hidden="true"></div>
-        <span class="tile__top"><span class="tile__ic"><svg class="ic"><use href="#i-pin"/></svg></span><span class="tile__n">08</span></span>
-        <span class="tile__body"><h3 class="tile__title" data-i18n="nav.contacts">Контакты</h3><p class="tile__desc" data-i18n="menu.contacts.d">Адрес, телефоны и запись</p><p class="tile__facts"><span data-i18n="contact.addressShort">Душанбе, ул. Н. Карабаева, 43/3</span><span data-i18n="contact.hours">Пн–Сб: 08:00–19:00</span></p></span>
-        <span class="tile__go" aria-hidden="true"><svg class="ic"><use href="#i-arrow-ne"/></svg></span>
-      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="section crew-sec" id="team">
+  <div class="container">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="section__num"><span>04</span> / <span data-i18n="team.kicker">Команда</span></p>
+        <h2 class="section__title reveal-title">
+          <span class="line"><span data-i18n="team.t1">Вместе —</span></span>
+          <span class="line"><span class="accent">СТО999</span></span>
+        </h2>
+      </div>
+      <p class="section__lead reveal" data-i18n="team.lead">У каждого направления — свой мастер. Нажмите на карточку: расскажем, чем он занимается, когда к нему обращаться и что он советует.</p>
+    </div>
+    <div class="crew">
+      <article class="crew__card reveal" data-svc-link="body" data-img="assets/img/team-1.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-1.webp" alt="Кузовщик за работой" loading="lazy" width="900" height="1200">
+        <span class="crew__n">01</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.1">Кузовщик-жестянщик</h3><p class="crew__what" data-i18n="role.1d">геометрия, рихтовка, сварка</p></div>
+        <span class="crew__svc" data-i18n="svc.body.t" hidden>Жестянка</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.1.x">Восстанавливает кузов после ДТП: возвращает детали в правильную форму и геометрию. От его работы зависит, будет ли машина после ремонта выглядеть как до аварии.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.1.w1">После ДТП, даже небольшого</li><li data-i18n="role.1.w2">Двери или капот закрываются туго или с неровным зазором</li><li data-i18n="role.1.w3">На кузове вмятина с повреждённой краской</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.1.tip">Не откладывайте ремонт после ДТП: на повреждённом металле ржавчина появляется быстрее, чем кажется.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="paint" data-img="assets/img/team-2.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-2.webp" alt="Покраска детали" loading="lazy" width="900" height="1200">
+        <span class="crew__n">02</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.2">Маляр</h3><p class="crew__what" data-i18n="role.2d">подготовка, подбор цвета, покраска</p></div>
+        <span class="crew__svc" data-i18n="svc.paint.t" hidden>Покраска авто</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.2.x">Готовит деталь и красит её так, чтобы после ремонта не было видно, где была покраска: ни по цвету, ни по блеску.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.2.w1">Царапины до грунта или металла</li><li data-i18n="role.2.w2">Сколы и потёртости на бамперах</li><li data-i18n="role.2.w3">Деталь после кузовного ремонта</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.2.tip">Сколы лучше закрасить сразу: небольшой участок восстановить проще, чем потом перекрашивать всю деталь.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="pdr" data-img="assets/img/team-3.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-3.webp" alt="Мастер PDR за работой" loading="lazy" width="900" height="1200">
+        <span class="crew__n">03</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.3">Мастер PDR</h3><p class="crew__what" data-i18n="role.3d">вмятины без покраски</p></div>
+        <span class="crew__svc" data-i18n="svc.pdr.t" hidden>PDR — вмятины без покраски</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.3.x">Убирает вмятины без покраски: специальным инструментом выдавливает металл, пока поверхность снова не станет ровной.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.3.w1">Вмятина от двери на парковке</li><li data-i18n="role.3.w2">Следы града на крыше и капоте</li><li data-i18n="role.3.w3">Вмятина есть, а краска цела</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.3.tip">Если лакокрасочное покрытие не повреждено, в большинстве случаев можно обойтись без покраски.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="ppf" data-img="assets/img/team-4.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-4.webp" alt="Детейлеры оклеивают капот плёнкой" loading="lazy" width="900" height="1200">
+        <span class="crew__n">04</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.4">Детейлер</h3><p class="crew__what" data-i18n="role.4d">полировка, бронеплёнка, химчистка</p></div>
+        <span class="crew__svc" data-i18n="svc.ppf.t" hidden>Бронеплёнка</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.4.x">Отвечает за внешний вид машины: возвращает блеск лаку и защищает кузов плёнкой.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.4.w1">Лак потускнел и покрылся мелкими царапинами</li><li data-i18n="role.4.w2">Новая машина, и хочется сохранить кузов</li><li data-i18n="role.4.w3">Готовите машину к продаже</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.4.tip">Бронеплёнку выгоднее клеить на новую машину — пока на кузове ещё нет сколов.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="mech" data-img="assets/img/team-5.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-5.webp" alt="Механик в подкапотном пространстве" loading="lazy" width="900" height="1200">
+        <span class="crew__n">05</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.5">Механик-диагност</h3><p class="crew__what" data-i18n="role.5d">ходовая, масло, диагностика</p></div>
+        <span class="crew__svc" data-i18n="svc.mech.t" hidden>Механика и диагностика</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.5.x">Находит причину неисправности и ремонтирует то, что действительно сломано, без лишних замен.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.5.w1">Горит ошибка на панели приборов</li><li data-i18n="role.5.w2">Стук или вибрация при езде</li><li data-i18n="role.5.w3">Пора менять масло и фильтры</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.5.tip">Сначала диагностика, потом решение: так вы платите только за то, что действительно нужно.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="mech" data-img="assets/img/team-6.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-6.webp" alt="Диагностика электроники в салоне" loading="lazy" width="900" height="1200">
+        <span class="crew__n">06</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.6">Автоэлектрик</h3><p class="crew__what" data-i18n="role.6d">электрика и электромобили</p></div>
+        <span class="crew__svc" data-i18n="svc.mech.t" hidden>Механика и диагностика</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.6.x">Разбирается в электрике и электронике автомобиля, включая все виды электромобилей.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.6.w1">Не работает электрика или электроника</li><li data-i18n="role.6.w2">Нужно проверить или обслужить электромобиль</li><li data-i18n="role.6.w3">Быстро садится аккумулятор</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.6.tip">Не сбрасывайте ошибки электрики без диагностики: причина останется, и ошибка вернётся.</p></blockquote>
+        </div>
+      </article>
+      <article class="crew__card reveal" data-svc-link="wash" data-img="assets/img/team-7.webp" tabindex="0" role="button" aria-haspopup="dialog">
+        <img class="crew__img" src="assets/img/team-7.webp" alt="Мойка колеса" loading="lazy" width="900" height="1200">
+        <span class="crew__n">07</span>
+        <span class="crew__open" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span>
+        <div class="crew__info"><h3 class="crew__name" data-i18n="role.7">Мойщик</h3><p class="crew__what" data-i18n="role.7d">мойка кузова и салона</p></div>
+        <span class="crew__svc" data-i18n="svc.wash.t" hidden>Автомойка</span>
+        <div class="crew__detail" hidden>
+          <h4 data-i18n="team.does">Чем занимается</h4>
+          <p data-i18n="role.7.x">Возвращает машине чистый вид. После любого ремонта у нас делает комплексную мойку бесплатно.</p>
+          <h4 data-i18n="team.when">Когда обращаться</h4>
+          <ul><li data-i18n="role.7.w1">После поездок по пыльным дорогам</li><li data-i18n="role.7.w2">Машина с бронеплёнкой и нужна бережная мойка</li><li data-i18n="role.7.w3">После любого ремонта у нас — бесплатно</li></ul>
+          <blockquote class="tip"><span data-i18n="team.tip">Совет мастера</span><p data-i18n="role.7.tip">Дорожные реагенты и битум постепенно портят лак, поэтому регулярная мойка — это не только про внешний вид.</p></blockquote>
+        </div>
+      </article>
+      <div class="crew__card crew__card--ask reveal">
+        <svg class="crew__ask-ic"><use href="#i-wa"/></svg>
+        <h3 data-i18n="team.ask.t">Не знаете, к кому обратиться?</h3>
+        <p data-i18n="team.ask.d">Опишите проблему в WhatsApp — подскажем, какой мастер нужен.</p>
+        <a class="btn btn--red js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="team.ask.cta">Написать в WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAFE ============ -->
+<section class="cafe" id="cafe">
+  <div class="container cafe__inner reveal">
+    <div class="cafe__ic"><svg><use href="#i-coffee"/></svg></div>
+    <div class="cafe__txt">
+      <p class="section__num"><span>05</span> / <span data-i18n="cafe.kicker">Кафе 999</span></p>
+      <h2 data-i18n="cafe.t">Пока мастера работают — кофе за нами</h2>
+      <p data-i18n="cafe.d">На территории СТО работает наше кафе 999. Можно спокойно подождать автомобиль, выпить кофе и перекусить.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container faq__grid">
+    <div class="faq__head">
+      <p class="section__num"><span>06</span> / <span data-i18n="faq.kicker">Вопросы</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="faq.t1">Частые</span></span>
+        <span class="line"><span data-i18n="faq.t2">вопросы</span></span>
+      </h2>
+      <p class="section__lead reveal" data-i18n="faq.lead">Не нашли ответ? Напишите нам — ответим в WhatsApp или Telegram.</p>
+      <a class="btn btn--ghost magnetic reveal js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="faq.ask">Задать вопрос</span></a>
+    </div>
+    <div class="faq__list">
+      <details class="qa reveal"><summary><span data-i18n="faq.1q">Сколько стоит ремонт?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.1a">Точную стоимость называем после осмотра — так цена честная и без сюрпризов. Для предварительной оценки пришлите фото повреждения в WhatsApp.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.2q">Нужно ли записываться заранее?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.2a">Желательно. Позвоните или напишите в WhatsApp/Telegram — согласуем удобное время, и мастер будет свободен к вашему приезду.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.3q">Сколько длится кузовной ремонт?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.3a">Зависит от повреждения. Сложный ремонт может занять несколько дней: там, где важны геометрия и зазоры, мы не спешим. Точный срок назовём после осмотра.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.4q">Какая гарантия на бронеплёнку?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.4a">Гарантия на плёнку — 10 лет. Плёнка обладает эффектом самовосстановления: мелкие царапины на ней затягиваются.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.5q">Мойка после ремонта правда бесплатная?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.5a">Да. После ремонта мы делаем комплексную мойку автомобиля бесплатно.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.6q">Ремонтируете электромобили?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.6a">Да, мы ремонтируем все виды электромобилей.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.7q">Можете заказать запчасти?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.7a">Да, подбираем и заказываем автозапчасти по VIN-коду вашего автомобиля.</p></div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq.8q">Где подождать, пока идёт ремонт?</span><svg class="ic"><use href="#i-plus"/></svg></summary><div class="qa__a"><p data-i18n="faq.8a">На территории работает наше кафе 999 — можно выпить кофе и перекусить.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="section contacts" id="contacts">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__num"><span>07</span> / <span data-i18n="contact.kicker">Контакты</span></p>
+      <h2 class="section__title reveal-title">
+        <span class="line"><span data-i18n="contact.t1">Приезжайте</span></span>
+        <span class="line"><span class="accent" data-i18n="contact.t2">или напишите</span></span>
+      </h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-pin"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.addrLabel">Адрес</p><p class="cinfo__val" data-i18n="contact.address">г. Душанбе, ул. Н. Карабаева, 43/3</p></div>
+        </div>
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-phone"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.phoneLabel">Телефоны</p>
+            <p class="cinfo__val"><a href="tel:+992944949999">+992 944 94 9999</a></p>
+            <p class="cinfo__val"><a href="tel:+992446109999">+992 44 610 9999</a></p>
+          </div>
+        </div>
+        <div class="cinfo">
+          <svg class="cinfo__ic"><use href="#i-clock"/></svg>
+          <div><p class="cinfo__label" data-i18n="contact.hoursLabel">Режим работы</p><p class="cinfo__val" data-i18n="contact.hours">Пн–Сб: 08:00–19:00</p><p class="status js-status"><span class="dot js-open-dot"></span><span class="js-status-text"></span></p></div>
+        </div>
+        <div class="socials">
+          <a class="social social--wa js-wa" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <a class="social social--tg" href="https://t.me/+992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a>
+          <a class="social social--ig" href="https://www.instagram.com/autoservice999.tj/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span>Instagram</span></a>
+        </div>
+        <figure class="landmark">
+          <img src="assets/img/place-sign.webp" alt="Вывеска «Автосервис 999» на крыше здания" loading="lazy" width="1080" height="729">
+          <figcaption><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="contact.landmark">Ориентир — вывеска «Автосервис 999» на крыше</span></figcaption>
+        </figure>
+        <div class="map">
+          <iframe title="Карта: АвтоСервис 999" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=%D0%94%D1%83%D1%88%D0%B0%D0%BD%D0%B1%D0%B5%2C+%D0%9D.+%D0%9A%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+43%2F3&z=16&output=embed"></iframe>
+          <a class="map__open" href="https://www.google.com/maps/search/?api=1&query=%D0%94%D1%83%D1%88%D0%B0%D0%BD%D0%B1%D0%B5%2C+%D0%9D.+%D0%9A%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0+43%2F3" target="_blank" rel="noopener"><span data-i18n="contact.route">Построить маршрут</span><svg class="ic"><use href="#i-arrow-ne"/></svg></a>
+        </div>
+      </div>
+
+      <form class="booking reveal" novalidate>
+        <h3 class="booking__title" data-i18n="form.title">Запись на осмотр</h3>
+        <p class="booking__sub" data-i18n="form.sub">Заполните форму — она откроет WhatsApp с готовым сообщением. Мы ответим в рабочее время.</p>
+        <label class="field"><span data-i18n="form.name">Ваше имя</span><input name="name" type="text" autocomplete="name" required maxlength="60"></label>
+        <label class="field"><span data-i18n="form.phone">Телефон</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+992 ___ __ ____"></label>
+        <label class="field"><span data-i18n="form.car">Марка и модель авто</span><input name="car" type="text" maxlength="60" data-i18n-attr="placeholder:form.carPh" placeholder="Например, Toyota Camry"></label>
+        <label class="field"><span data-i18n="form.service">Услуга</span>
+          <select name="service">
+            <option value="wash" data-i18n="svc.wash.t">Автомойка</option>
+            <option value="polish" data-i18n="svc.polish.t">Полировка</option>
+            <option value="body" data-i18n="svc.body.t">Жестянка</option>
+            <option value="pdr" data-i18n="svc.pdr.t">PDR — вмятины без покраски</option>
+            <option value="paint" data-i18n="svc.paint.t">Покраска авто</option>
+            <option value="mech" data-i18n="svc.mech.t">Механика и диагностика</option>
+            <option value="ppf" data-i18n="svc.ppf.t">Бронеплёнка</option>
+            <option value="other" data-i18n="form.other">Другое / не знаю</option>
+          </select>
+        </label>
+        <label class="field"><span data-i18n="form.msg">Комментарий</span><textarea name="msg" rows="3" maxlength="500" data-i18n-attr="placeholder:form.msgPh" placeholder="Что случилось с машиной?"></textarea></label>
+        <p class="booking__err" role="alert" aria-live="polite"></p>
+        <button class="btn btn--red btn--lg btn--block magnetic" type="submit"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="form.submit">Отправить в WhatsApp</span></button>
+        <div class="booking__done" role="status" hidden>
+          <p class="booking__ready"></p>
+          <a class="btn btn--ghost btn--block" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span></span></a>
+        </div>
+        <p class="booking__alt"><span data-i18n="form.or">или</span> <a href="https://t.me/+992944949999" target="_blank" rel="noopener" data-i18n="form.tg">написать в Telegram</a></p>
+      </form>
     </div>
   </div>
 </section>
