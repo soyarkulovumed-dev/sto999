@@ -746,6 +746,8 @@ abbr.sto::before {
   .modal__card { grid-template-columns: 1fr; width: 100%; max-height: 92vh; border-radius: 24px 24px 0 0; overflow-y: auto; overscroll-behavior: contain; }
   .modal__card:has(.modal__media:empty) { width: 100%; }
   .modal__media { min-height: 0; height: min(56vw, 260px); }
+  .modal--team .modal__card { grid-template-columns: 1fr; }
+  .modal--team .modal__media { height: min(78vw, 340px); }
   .modal__actions { grid-template-columns: 1fr; }
   .modal__media::after { background: linear-gradient(180deg, rgba(var(--surface-rgb), 0) 60%, var(--surface)); }
   .modal__content { overflow: visible; max-height: none; }
