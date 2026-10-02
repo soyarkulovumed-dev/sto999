@@ -375,6 +375,7 @@
     if (e.key === "Escape") {
       if (modal.classList.contains("is-open")) closeModal();
       else if (!menu.hidden) setMenu(false);
+      else if (nudgeApi) nudgeApi.hide();
     }
     if (e.key === "Tab" && modal.classList.contains("is-open")) {
       const f = $$("a[href], button:not([disabled]):not([hidden])", card);
@@ -406,8 +407,7 @@
       open = !sunday && minutes >= 8 * 60 && minutes < 19 * 60;
     } catch (e) { return; }
     $$(".js-open-dot").forEach((d) => { d.classList.toggle("is-open", open); d.classList.toggle("is-closed", !open); });
-    const txt = $(".js-status-text");
-    if (txt) txt.textContent = open ? ui().open : sunday ? ui().closedSun : ui().closed;
+    $$(".js-status-text").forEach((txt) => { txt.textContent = open ? ui().open : sunday ? ui().closedSun : ui().closed; });
   }
   setInterval(updateStatus, 60000);
 
@@ -516,6 +516,54 @@
       car.addEventListener("pointerup", stop, { once: true });
       car.addEventListener("pointercancel", stop, { once: true });
     });
+  }
+
+  /* ---------------- booking reminder ----------------
+     First shown 1 minute after the visitor arrives, then every 1.5 minutes, across pages
+     of the same visit. Hides itself after a while, never covers an open window, the menu
+     or a form being filled in, and stops for the visit once the visitor books or calls. */
+  const nudge = $(".nudge");
+  const session = {
+    get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } }
+  };
+  let nudgeApi = null;
+  if (nudge && session.get("sto999-nudge-off") !== "1") {
+    const FIRST = 60000, REPEAT = 90000, LIFE = 18000;
+    let timer = 0, lifeTimer = 0, hovered = false;
+    let due = +session.get("sto999-nudge-due") || Date.now() + FIRST;
+    session.set("sto999-nudge-due", String(due));
+    nudge.style.setProperty("--nudge-life", `${LIFE / 1000}s`);
+
+    const busy = () => document.hidden || modal.classList.contains("is-open") || !menu.hidden
+      || /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || "");
+    const schedule = (ms) => { clearTimeout(timer); timer = setTimeout(show, Math.max(1000, ms)); };
+    const hide = () => {
+      clearTimeout(lifeTimer);
+      nudge.classList.remove("is-open");
+      setTimeout(() => { if (!nudge.classList.contains("is-open")) nudge.hidden = true; }, 500);
+    };
+    const autoHide = () => { lifeTimer = setTimeout(() => (hovered ? autoHide() : hide()), LIFE); };
+    function show() {
+      if (busy()) { schedule(8000); return; }
+      due = Date.now() + REPEAT;
+      session.set("sto999-nudge-due", String(due));
+      schedule(REPEAT);
+      nudge.hidden = false;
+      requestAnimationFrame(() => nudge.classList.add("is-open"));
+      autoHide();
+    }
+    const stop = () => { session.set("sto999-nudge-off", "1"); clearTimeout(timer); hide(); };
+
+    $(".nudge__close", nudge).addEventListener("click", hide);
+    nudge.addEventListener("pointerenter", () => { hovered = true; });
+    nudge.addEventListener("pointerleave", () => { hovered = false; });
+    $$(".js-nudge-book", nudge).forEach((a) => a.addEventListener("click", stop));
+    // booking through any other WhatsApp button or the form also ends the reminders
+    $$('.js-wa, a[href^="tel:"]').forEach((a) => { if (!nudge.contains(a)) a.addEventListener("click", stop); });
+    if (form) form.addEventListener("submit", () => { if ($(".booking__done", form).hidden === false) stop(); });
+    schedule(due - Date.now());
+    nudgeApi = { hide };
   }
 
   /* ---------------- misc ---------------- */

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261003">
+  <link rel="stylesheet" href="css/styles.css?v=20261006">
   <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("sto999-theme")==="light")document.documentElement.setAttribute("data-site-theme","light")}catch(e){}</script>
   
 </head>
@@ -314,7 +314,24 @@
   </div>
 </div>
 
-<script src="js/i18n.js?v=20261003"></script>
-<script src="js/main.js?v=20261003"></script>
+<!-- ============ BOOKING REMINDER (1 min after opening, then every 1.5 min) ============ -->
+<aside class="nudge" role="dialog" aria-modal="false" aria-labelledby="nudge-title" hidden>
+  <button class="nudge__close" type="button" aria-label="Закрыть" data-i18n-attr="aria-label:a11y.close"><svg class="ic"><use href="#i-close"/></svg></button>
+  <div class="nudge__top">
+    <span class="nudge__badge"><img src="assets/img/logo.png" alt="" width="720" height="528"></span>
+    <p class="nudge__status"><span class="dot js-open-dot"></span><span class="js-status-text"></span></p>
+  </div>
+  <h3 class="nudge__title" id="nudge-title" data-i18n="nudge.t">Запишитесь на осмотр</h3>
+  <p class="nudge__text" data-i18n="nudge.d">Осмотрим машину и назовём точную цену и сроки. Ответим в WhatsApp в рабочее время.</p>
+  <p class="nudge__perk"><svg class="ic"><use href="#i-gift"/></svg><span data-i18n="nudge.perk">Мойка в подарок после ремонта</span></p>
+  <div class="nudge__actions">
+    <a class="btn btn--red js-wa js-nudge-book" href="https://wa.me/992944949999" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="cta.waBook">Записаться в WhatsApp</span></a>
+    <a class="btn btn--ghost js-nudge-book" href="tel:+992944949999"><svg class="ic"><use href="#i-phone"/></svg><span data-i18n="cta.call">Позвонить</span></a>
+  </div>
+  <span class="nudge__bar" aria-hidden="true"></span>
+</aside>
+
+<script src="js/i18n.js?v=20261006"></script>
+<script src="js/main.js?v=20261006"></script>
 </body>
 </html>

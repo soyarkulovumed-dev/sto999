@@ -240,9 +240,9 @@ window.I18N = {
     "step.6d": "Мошинро баъди мойкаи комплексии ройгон месупорем.",
 
     "works.kicker": "Корҳо",
-    "hero.l1": "Кузов · рангубор",
+    "hero.l1": "Кузов",
     "hero.l2": "Бронеплёнка",
-    "hero.l3": "PDR · механика",
+    "hero.l3": "Механика",
     "flag.tag": "Кейс · бронеплёнка",
     "flag.lead": "Пӯшонидани пурра бо бронеплёнкаи сиёҳ ва иваз кардани ранг: аз зайтунӣ — ба сиёҳи амиқ. Ҷудокунӣ, пӯшонидан, ҷамъоварӣ — ва black out-и ниҳоӣ.",
     "flag.f1": "Пӯшонидани пурраи кузов",
@@ -359,6 +359,9 @@ window.I18N = {
     "role.5.x": "Сабаби носозиро меёбад ва он чиро таъмир мекунад, ки воқеан вайрон аст, бе ивазкуниҳои зиёдатӣ.",
     "role.6.x": "Дар электрика ва электроникаи мошин, аз ҷумла ҳама намуди электромобилҳо, бохабар аст.",
     "role.7.x": "Ба мошин намуди тозаро бармегардонад. Баъди ҳар гуна таъмир дар назди мо мойкаи комплексӣ ройгон аст.",
+    "nudge.t": "Барои муоина сабти ном шавед",
+    "nudge.d": "Мошинро муоина карда, нарх ва мӯҳлати дақиқро мегӯем. Дар WhatsApp дар вақти корӣ ҷавоб медиҳем.",
+    "nudge.perk": "Мойка баъди таъмир — тӯҳфа",
     "footer.up": "Ба боло"
   },
 
@@ -598,9 +601,9 @@ window.I18N = {
     "step.6d": "Your car is returned after a free full wash.",
 
     "works.kicker": "Works",
-    "hero.l1": "Body · paint",
+    "hero.l1": "Bodywork",
     "hero.l2": "PPF",
-    "hero.l3": "PDR · mechanics",
+    "hero.l3": "Mechanics",
     "flag.tag": "Case · paint protection film",
     "flag.lead": "A full black PPF wrap with a colour change: from olive to deep black. Disassembly, wrapping, reassembly — and the final black out.",
     "flag.f1": "Full body wrap",
@@ -717,6 +720,9 @@ window.I18N = {
     "role.5.x": "Finds the cause of a fault and repairs what is actually broken, without unnecessary replacements.",
     "role.6.x": "Knows the car's electrics and electronics, including every kind of electric vehicle.",
     "role.7.x": "Gives the car back its clean look. After any repair, the full wash is free.",
+    "nudge.t": "Book an inspection",
+    "nudge.d": "We'll inspect your car and give you an exact price and timing. We reply on WhatsApp during working hours.",
+    "nudge.perk": "Free wash after any repair",
     "footer.up": "Back to top"
   }
 };

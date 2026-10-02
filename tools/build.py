@@ -12,7 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
 BASE = "https://soyarkulovumed-dev.github.io/sto999/"
-VERSION = "20261003"  # bump to make returning visitors fetch new CSS/JS
+VERSION = "20261006"  # bump to make returning visitors fetch new CSS/JS
 
 # key, link, Russian title, icon, Russian description, shown in the header bar
 NAV = [
