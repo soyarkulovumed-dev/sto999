@@ -664,6 +664,10 @@ body.is-ready .road { opacity: 1; }
 .crew__card--ask h3 { font: 800 clamp(18px, 1.6vw, 22px)/1.15 var(--f-display); text-transform: uppercase; }
 .crew__card--ask p { font-size: 15px; color: var(--muted); }
 .crew__card--ask .btn { align-self: flex-start; white-space: normal; height: auto; min-height: 50px; }
+/* 4 and 3 columns: the card closes the last row next to the 9th specialist */
+.crew__card--ask { grid-column: span 3; justify-content: center; padding: clamp(24px, 3vw, 44px); }
+.crew__card--ask h3 { max-width: 520px; font-size: clamp(22px, 2.2vw, 32px); }
+.crew__card--ask p { max-width: 460px; }
 .cases-sec .story + .story { margin-top: 20px; }
 
 /* ---------- booking reminder ---------- */
@@ -772,6 +776,8 @@ abbr.sto::before {
   .mmenu__inner { grid-template-columns: 1fr; }
   .mmenu__nav { grid-template-columns: 1fr; }
   .crew { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .crew__card--ask { grid-column: auto; aspect-ratio: 3 / 4; justify-content: flex-end; }
+  .crew__card--ask h3 { font-size: clamp(17px, 2.6vw, 22px); }
   .modal { padding: 0; place-items: end center; }
   .modal__card { grid-template-columns: 1fr; width: 100%; max-height: 92vh; border-radius: 24px 24px 0 0; overflow-y: auto; overscroll-behavior: contain; }
   .modal__card:has(.modal__media:empty) { width: 100%; }
@@ -835,7 +841,12 @@ abbr.sto::before {
   .crew { gap: 10px; }
   .crew__info { left: 12px; right: 12px; bottom: 12px; }
   .crew__what { display: none; }
-  .crew__card--ask { grid-column: 1 / -1; }
+  .crew__name { font-size: 15px; overflow-wrap: anywhere; }
+  .crew__card--ask { padding: 14px; gap: 8px; }
+  .crew__card--ask p { display: none; }
+  .crew__ask-ic { width: 32px; height: 32px; }
+  .crew__card--ask h3 { font-size: 15px; }
+  .crew__card--ask .btn { min-height: 40px; padding: 8px 12px; font-size: 12.5px; gap: 6px; }
   .mmenu__nav a { grid-template-columns: 44px minmax(0, 1fr) auto; padding: 13px 0; }
   .mmenu__ic { width: 44px; height: 44px; }
   .footer__bottom { flex-direction: column; }
