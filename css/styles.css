@@ -331,7 +331,7 @@ body.is-ready .hero__reel figcaption { opacity: 1; transform: none; }
 .glow:hover::before, .glow:hover::after { opacity: 1; }
 
 /* ---------- services ---------- */
-.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .svc {
   display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden;
   background: linear-gradient(180deg, var(--surface), var(--bg-2)); border: 1px solid var(--line);
@@ -353,8 +353,6 @@ body.is-ready .hero__reel figcaption { opacity: 1; transform: none; }
 .svc__more .ic { width: 16px; height: 16px; color: var(--red); transition: transform .4s var(--ease); }
 .svc:hover .svc__more .ic { transform: translateX(5px); }
 .svc--accent { background: radial-gradient(120% 70% at 100% 100%, rgba(var(--red-rgb), .2), transparent 60%), linear-gradient(180deg, var(--surface), var(--bg-2)); }
-.svc--wide { grid-column: span 2; }
-.svc--wide .svc__media { aspect-ratio: 32 / 11; }
 
 .extra { margin-top: 28px; display: flex; align-items: center; flex-wrap: wrap; gap: 14px 22px; padding: 22px 26px; border: 1px dashed var(--line-2); border-radius: var(--radius); }
 .extra__label { font: 600 12px/1 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
@@ -739,6 +737,8 @@ abbr.sto::before {
   .nav { display: none; }
   .header__actions { margin-left: auto; }
   .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-grid > .svc:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .svc-grid > .svc:last-child:nth-child(odd) .svc__media { aspect-ratio: 32 / 11; }
   .steps { grid-template-columns: repeat(3, 1fr); row-gap: 44px; }
   .steps::before, .steps::after { display: none; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
@@ -813,8 +813,7 @@ abbr.sto::before {
   .fact + .fact { padding-left: 14px; }
   .fact:nth-child(3) { padding-left: 0; }
   .svc-grid { grid-template-columns: 1fr; }
-  .svc__media, .svc--wide .svc__media { aspect-ratio: 16 / 9; }
-  .svc--wide { grid-column: auto; }
+  .svc__media, .svc-grid > .svc:last-child:nth-child(odd) .svc__media { aspect-ratio: 16 / 9; }
   .extra { padding: 20px; }
   .why-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; row-gap: 0; }
